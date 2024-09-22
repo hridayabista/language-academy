@@ -1,0 +1,167 @@
+:root {
+  --light: #f6f6f9;
+  --primary: #1976d2;
+  --light-primary: #cfe8ff;
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  --dark: #363949;
+  --danger: #d32f2f;
+  --light-danger: #fecdd3;
+  --warning: #fbc02d;
+  --light-warning: #fff2c6;
+  --success: #388e3c;
+  --light-success: #bbf7d0;
+}
+
+.table-container {
+  max-width: 1500px;
+}
+
+.table-container .table-filter {
+  max-width: 100%;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.table-filter .table-title {
+  width: 50%;
+  position: relative;
+}
+
+.table-filter .filter {
+  width: 50%;
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 10px;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: var(--primary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--light);
+  }
+  .table-row {
+    background-color: var(--light);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    color: var(--dark);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 25%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 15%;
+  }
+
+  .col-5 {
+    flex-basis: 15%;
+  }
+  .col-6 {
+    flex-basis: 15%;
+  }
+
+  .col-7 {
+    flex-basis: 15%;
+  }
+
+  .col-8 {
+    flex-basis: 15%;
+  }
+
+  .action {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit {
+    color: var(--primary);
+  }
+
+  .delete {
+    color: var(--danger);
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+
+    li {
+      display: block;
+    }
+    .col {
+      flex-basis: 100%;
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: var(--primary);
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.print-container {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: right;
+	align-items: right;
+}
+
+print-container a {
+    position: fixed; /* Keeps the button fixed in the corner even while scrolling */
+    top: 20px; /* Adjusts the top distance */
+    right: 20px; /* Aligns the button to the right corner */
+    padding: 10px 20px; /* Adds padding to make it look like a button */
+    background-color: #28a745; /* Button background color */
+    color: var(--light); /* Button text color */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Shows pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for a button effect */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transitions */
+}
+
+print-container a:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+print-container a:active {
+    transform: scale(0.95); /* Slightly reduce size on click to simulate press effect */
+}
+
